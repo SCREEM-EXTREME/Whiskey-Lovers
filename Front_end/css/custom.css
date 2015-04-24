@@ -1,0 +1,68 @@
+body {
+    background-color: #1A1A1A;
+}
+#signup {
+    background-image: url("./assets/blue_label_image.jpg");
+}
+.col-full  {
+    color: #7E7E7E;
+}
+#id {
+    width: 200px;
+}
+#logo-container, #container_sign, h1 {
+    color: #7E7E7E;   
+}
+.Home{
+    color: #7E7E7E;
+}
+.col-contact, .col-social{
+    color: #7E7E7E;
+}
+.top-page  {
+    background-color: #1A1A1A;
+    color: #7E7E7E;
+}
+#login {
+    vertical-align: left;
+}
+input {
+    display: table-column;
+
+}
+/*nav bar styling*/
+
+
+/*a:link, a:visited {
+    display: block;
+    width: 180px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #1A1A1A;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}*/
+/*
+a:hover, a:active {
+    background-color: #696969;
+}*/
+label {
+    float: left;
+    width: 20%;
+    text-align: right;
+    margin-right: 0.5em;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+.form-field-no-caption {
+    margin-left: 20%;
+    padding-left: 0.5em;
+}
+#msg {
+    color: #7E7E7E;
+}

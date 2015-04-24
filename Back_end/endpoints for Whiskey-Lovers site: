@@ -1,0 +1,14 @@
+endpoints for Whiskey-Lovers site:
+
+Messages:
+GET = /messages                    (lists all the posted messages)
+GET = /messages/{id}               (retrieves a specific message)
+POST= /messages                    (create new message- requires user authentication)
+
+Sessions:
+POST   = /sessions                 (create new session)
+GET    = /authenticated            (check if authenticated)
+DELETE = /sessions                 (logout of a session)
+
+Users:
+POST   = /user                     (create new user)
