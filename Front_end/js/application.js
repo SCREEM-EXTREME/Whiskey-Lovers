@@ -1,56 +1,57 @@
  $(document).ready(function(){
   //defining the request
-  var request = {
-    type: 'GET',
-    url: 'http://localhost:3000/KennethChan',
-    success: function(response) {
-      console.log(response);
-    }
-  };
+  // var request = {
+  //   type: 'GET',
+  //   url: 'http://localhost:3000/KennethChan',
+  //   success: function(response) {
+  //     console.log(response);
+  //   }
+  // };
   
   //signing in
-  $.ajax(request);
+  // $.ajax(request);
 
-  $( "#btn btn-default" ).click(function(event) {
+  $('#bBoard').hide();
+
+  $(document).on('click', "#signinBtn", function(event) {
     event.preventDefault();
-    var psw = $("#password").val();
-    var email = $("#email").val();
+
+    var psw = $("#InputPassword1").val();
+    var username = $("#InputUsername1").val();
 
     $.ajax({
-      method: "POST",
-      url: "http://localhost:3000/sessions", //note frontend needs to be 3000
+      type: 'POST',
+      url: "http://localhost:8000/sessions", //note frontend needs to be 3000
       data: {
         user: {
-          username: email,
+          username: username,
           password: psw
         }
       },
-      
       success: function(response) {
         console.log("create session / logged in", response);
+        // window.location = "bulletin_board.html";
+        $('#bBoard').show();
+        authenticate();
       },
     });
 
-    console.log(psw, email);
+    console.log(psw, username);
     
   });
 //
-   $.ajax({
-      method: "GET",
-      path: "/authenticated",
-      success: function(request, reply) {
-         //retrieve the session information from the browser
-      var session = request.session.get("Whiskey-lovers_session");
-       var db = request.server.plugins["hapi-mongodb"].db
-         db.collection("sessions").findOne({"session_id": session.session_key}, function(err, result){
-         if (result === null) {
-           return reply( { "message" : "Unauthorized! NOT SIGNED IN YET!!" } );
-         } else {
-           return reply ( { "message" : "Authorized. Congrats!" } );
-           }
-        });
-     }
-   });
+   function authenticate() {
+     $.ajax({
+        type: "GET",
+        url: "http://localhost:8000/authenticated",
+        xhrFields: {
+          withCredentials: true
+        },
+        success: function(response) {
+          console.log(response);
+       }
+     });
+   };
 
 /*   $.ajax({
      method: "DELETE",
