@@ -1,68 +1,88 @@
 body {
-    background-color: #1A1A1A;
+  background-color: #1A1A1A;
+  color: white;
+  font-size: 18px;
 }
+
+#homeImages {
+  margin-top: 30px;
+}
+
 #signup {
-    background-image: url("./assets/blue_label_image.jpg");
+  background-image: url("../css/assets/blue_label_image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+#indexPage {
+  background-image: url("../css/assets/whiskyglass.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.popout {
+  background-color: rgba(5,5,5, 0.4);
+}
+
 .col-full  {
-    color: #7E7E7E;
+  color: #DDD;
 }
+
 #id {
-    width: 200px;
+  width: 200px;
 }
 #logo-container, #container_sign, h1 {
-    color: #7E7E7E;   
+  color: #DDD;
 }
 .Home{
-    color: #7E7E7E;
+  color: #DDD;
 }
 .col-contact, .col-social{
-    color: #7E7E7E;
+  color: #DDD;
 }
 .top-page  {
-    background-color: #1A1A1A;
-    color: #7E7E7E;
+  background-color: #1A1A1A;
+  color: #DDD;
 }
 #login {
-    vertical-align: left;
+  vertical-align: left;
 }
 input {
-    display: table-column;
+  display: table-column;
 
 }
 /*nav bar styling*/
 
 
 /*a:link, a:visited {
-    display: block;
-    width: 180px;
-    font-weight: bold;
-    color: #FFFFFF;
-    background-color: #1A1A1A;
-    text-align: center;
-    padding: 4px;
-    text-decoration: none;
-    text-transform: uppercase;
+  display: block;
+  width: 180px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: #1A1A1A;
+  text-align: center;
+  padding: 4px;
+  text-decoration: none;
+  text-transform: uppercase;
 }*/
 /*
 a:hover, a:active {
-    background-color: #696969;
+  background-color: #696969;
 }*/
 label {
-    float: left;
-    width: 20%;
-    text-align: right;
-    margin-right: 0.5em;
+  float: left;
+  width: 20%;
+  text-align: right;
+  margin-right: 0.5em;
 
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
 }
 .form-field-no-caption {
-    margin-left: 20%;
-    padding-left: 0.5em;
+  margin-left: 20%;
+  padding-left: 0.5em;
 }
 #msg {
-    color: #7E7E7E;
+  color: #DDD;
 }
